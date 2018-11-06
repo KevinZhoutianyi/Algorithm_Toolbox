@@ -1,47 +1,19 @@
+![](https://github.com/OnlyDrinkWater/MarkDown_Python/blob/master/Markdown/assert/6.PNG?raw=true)
 
+for example if we want to get the probability that 4 & 6 are compared
 
+when the pivot number is >6 or <4, it has nothing to two with whether 4 & 6 will compare 
 
+only when the pivot number is <= 6 and >=4, the decide whether 4 & 6 will be compared
 
-![wow](https://github.com/OnlyDrinkWater/MarkDown_Python/blob/master/Markdown/assert/5.PNG?raw=true)
+## therefore the probability for comparing is when pivot number is 4~6 and the pivot number is 4 or 6 and they will be compared
 
-
-
-
-
-![qwq](https://github.com/OnlyDrinkWater/MarkDown_Python/blob/master/Markdown/assert/2.PNG?raw=true)
-
-
-
-n problem -> n/b problem
-
-x time solution -> a * x  time
-
-
-
-Practice：(When you write a recursion algorithm and want to get the time)
-
-1. find the time used of the tree root f(n)
-
-2. find the time used of the second line af(n/b)
-
-   if equal: situation 2 (all the line matter)
-
-   if decreasing: situation 1 (first line matter)
-
-   if increasing: situation 3 (last line matter)
+## the formula can be derived as  2/(j-i+1)
 
 
 
 
 
-3 situations:   (i used)
+![](https://github.com/OnlyDrinkWater/MarkDown_Python/blob/master/Markdown/assert/7.PNG?raw=true)
 
-1.  f(n) is important    d>logba   so O(n^d)
-
-2.  both important      d=logba     so  O(n^d.logn)         f(n) * height of the tree
-
-3.  leaves are important      d<logba    so O(n^logba)
-
-
-
-
+for each comparison, the expected value of the time of work can be derived
