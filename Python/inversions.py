@@ -1,0 +1,43 @@
+# Uses python3
+import sys
+
+def mergeSortInversions(arr):
+    if len(arr) == 1:
+        return arr, 0
+    else: 
+        a = arr[:int(len(arr)/2)]
+        b = arr[int(len(arr)/2):]
+        
+        a, ai = mergeSortInversions(a)
+        b, bi = mergeSortInversions(b)
+
+        c = []
+        i = 0
+        j = 0
+
+        inversions = ai + bi
+        
+    while i < len(a) and j < len(b):
+        if a[i] <= b[j]:
+            c.append(a[i])
+            i += 1
+        else:
+            c.append(b[j])
+            j += 1
+            inversions += (len(a)-i)
+
+    c += a[i:]
+    c += b[j:]
+
+    return c,inversions
+
+def get_number_of_inversions(a, b, left, right):
+    b,x = mergeSortInversions(a)
+    return x
+
+
+if __name__ == '__main__':
+    input = sys.stdin.read()
+    n, *a = list(map(int, input.split()))
+    b = n * [0]
+    print(get_number_of_inversions(a, b, 0, len(a)))
